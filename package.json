@@ -11,20 +11,25 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:extension.applyPreselectedXSL",
+        "onCommand:extension.selectXSLToApply"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.sayHello",
-                "title": "Hello World"
+                "command": "extension.applyPreselectedXSL",
+                "title": "Apply pre selected XSL file"
+            },
+            {
+                "command": "extension.selectXSLToApply",
+                "title": "Select XSL file to apply"
             }
         ],
         "menus": {
             "explorer/context": [
                 {
-                    "command": "extension.sayHello",
+                    "command": "extension.selectXSLToApply",
                     "group": "7_modification"
                 }
             ]
