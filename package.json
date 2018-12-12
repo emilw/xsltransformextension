@@ -1,7 +1,7 @@
 {
-    "name": "change-file-encoding-for-many-files",
-    "displayName": "Change file encoding for many files",
-    "description": "Change file encodings for many files",
+    "name": "xslt-transformation",
+    "displayName": "XSLT Transformation",
+    "description": "XSLT Transformation extension for Visual Studio Code",
     "version": "0.0.1",
     "publisher": "emilw",
     "engines": {
@@ -20,7 +20,7 @@
             {
                 "command": "extension.applyPreselectedXSL",
                 "title": "Apply pre selected XSL file"
-            },
+                },
             {
                 "command": "extension.selectXSLToApply",
                 "title": "Select XSL file to apply"
@@ -31,8 +31,25 @@
                 {
                     "command": "extension.selectXSLToApply",
                     "group": "7_modification"
-                }
+                    }
             ]
+        },
+        "configuration": {
+            "title": "XML Transformer configuration",
+            "type": "object",
+            "properties": {
+                "xmlTransformer.xmlAndXsltMap": {
+                    "type": "array",
+                    "description": "The map of xml and xslts",
+                    "scope": "window"
+                },
+                "xmlTransformer.autoSaveXslAndXsltMap": {
+                    "type": "boolean",
+                    "description": "If the map of xml and xslts should be saved automatically in the workspace configuration",
+                    "default": true,
+                    "scope": "window"
+                }
+            }
         }
     },
     "scripts": {
